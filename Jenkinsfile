@@ -13,5 +13,14 @@ pipeline {
       }
     }
 
+    stage('Check for Updates') {
+      steps {
+        git(url: 'https://github.com/chezm89/MovieApp', branch: 'main')
+        sh '''git status
+git pull
+git push'''
+      }
+    }
+
   }
 }
