@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/styles.css">
+        <title>Movie App</title>
+    </head>
+    <body>
+        <header>
+            <form id="form" class="form">
+                <input type="text" autocomplete="off" placeholder="Search here" id="search" class="search">
+            </form>
+            
+        </header>
+
+        {% block h1 %}{% endblock %}
+        <div class="main-container">
+            <nav>
+                <ul>
+                    <li class="active"><a href="/">Trending</a></li>
+                    <li class="active"><a href="/action">Action</a></li>
+                    <li class="active"><a href="/adventure">Adventure</a></li>
+                    <li class="active"><a href="/animation">Animation</a></li>
+                    <li class="active"><a href="/comedy">Comedy</a></li>
+                    <li class="active"><a href="/crime">Crime</a></li>
+                    <li class="active"><a href="/documentary">Documentary</a></li>
+                    <li class="active"><a href="/drama">Drama</a></li>
+                    <li class="active"><a href="/family">Family</a></li>
+                    <li class="active"><a href="/fantasy">Fantasy</a></li>
+                    <li class="active"><a href="/history">History</a></li>
+                    <li class="active"><a href="/horror">Horror</a></li>
+                    <li class="active"><a href="/music">Music</a></li>
+                    <li class="active"><a href="/mystery">Mystery</a></li>
+                    <li class="active"><a href="/romance">Romance</a></li>
+                    <li class="active"><a href="/sciencefiction">Science Fiction</a></li>
+                    <li class="active"><a href="/thriller">Thriller</a></li>
+                    <li class="active"><a href="/tvmovie">TV Movie</a></li>
+                    <li class="active"><a href="/war">War</a></li>
+                    <li class="active"><a href="/western">Western</a></li>
+                </ul>
+            </nav>
+    
+                <div class="moviemaincontainer" id="moviemaincontainer">
+                    <div class="moviemain">
+                        
+                    </div>       
+                </div>
+        </div>
+            
+        {% block script %}{% endblock %}
+        
+    </body>
+</html>
+
