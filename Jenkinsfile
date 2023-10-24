@@ -18,7 +18,7 @@ pipeline {
         git(url: 'https://github.com/chezm89/MovieApp', branch: 'main')
         sh '''git status
 git pull
-git push'''
+git push origin main'''
       }
     }
 
