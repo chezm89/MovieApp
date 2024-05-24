@@ -344,4 +344,32 @@ western.js<br>
 
 All of the javascript files uses the same layout, the only difference is that the api link is different for each genre.
 
+# Automating Movie app AWS EC2
+#### Creator: Chez Middleton
+#### Description
+Creating a bash script to move files from an S3 bucket to nginx server for creating auto scaling groups with the complete website
+
+```
+    #!/bin/bash
+    
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    
+    sudo apt install vim -y
+    sudo apt install nginx -y
+    sudo apt install awscli -y
+    
+    sudo systemctl start nginx
+    sudo systemctl enable nginx
+    
+    sudo aws configure set aws_access_key_id ######################
+    sudo aws configure set aws_secret_access_key ############################
+    sudo aws configure set default.region us-east-1
+    sudo aws configure set default.output json
+    
+    sudo cd /var/www/html/
+    
+    aws s3 cp s3://movie-app-test/movieFile . --recursive
+    sudo reload nginx
+```
 
